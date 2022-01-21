@@ -1,0 +1,23 @@
+.loader_outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.loader_inner {
+  width: 32%;
+  height: 32%;
+  border-bottom-width: 2px;
+  border-color: rgb(185 28 28);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
