@@ -1,0 +1,78 @@
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services_container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+.services_left {
+  /* flex: 1; */
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.services_left h1 {
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 48px;
+  font-weight: 400;
+}
+.services_left p {
+  text-align: left;
+  margin: 0.5rem 0;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.services_right {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.service_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  height: 7rem;
+  width: max-content;
+}
+.service_card:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.service_icon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.service_card_desc {
+  margin-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.service_card_desc h3 {
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+.service_card_desc p {
+  margin-top: 0.25rem;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
