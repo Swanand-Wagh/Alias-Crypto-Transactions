@@ -1,0 +1,153 @@
+.common_style {
+  min-height: 70px;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 0.5px solid rgb(156 163 175);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+}
+.welcome {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome_container {
+  width: 72%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+.welcome_left {
+  align-self: center;
+  width: 40%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.welcome_left h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 2.25rem;
+  color: white;
+  padding: 0.25rem 0;
+}
+.welcome_left > p {
+  margin-top: 1.25rem;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  width: 90%;
+}
+.connect-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem 0;
+  background-color: #2952e3;
+  padding: 0.75rem;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.connect-btn:hover {
+  background-color: #2546bd;
+}
+.welcome_table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+}
+
+.welcome_right {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+.ecard {
+  margin: 1.25rem 0;
+  padding: 0.75rem;
+  height: 11rem;
+  width: 60%;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  border: none !important;
+}
+.card_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.card_icons_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.eth-icon {
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.address {
+  color: white;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.welcome_form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.25rem;
+}
+.welcome_input {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+.send-money-btn {
+  color: white;
+  background-color: transparent;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  border: 1px solid #3d4f7c;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 0.5rem;
+}
+.send-money-btn:hover {
+  background-color: #3d4f7c;
+}
