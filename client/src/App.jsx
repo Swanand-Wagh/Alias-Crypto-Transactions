@@ -1,6 +1,13 @@
 import React from "react";
 import "./App.css";
-import { Navbar, Welcome, Footer, Services, Transactions } from "./components";
+import {
+  Navbar,
+  Welcome,
+  Footer,
+  Services,
+  Transactions,
+  Loader,
+} from "./components";
 
 const App = () => {
   return (
@@ -10,7 +17,7 @@ const App = () => {
         <Welcome />
       </div>
       <Services />
-      {/* <Transactions /> */}
+      <Transactions />
       <Footer />
     </>
   );

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
-import { Loader } from ".";
+import Loader from "./Loader";
 import "./Welcome.css";
 
 // import { TransactionContext } from "../context/TransactionContext";
@@ -84,7 +84,7 @@ const Welcome = () => {
                 <BsInfoCircle fontSize={17} color="#fff" />
               </div>
               <div>
-                <p className="address"></p>
+                <p className="address">.....</p>
                 <p
                   style={{
                     color: "white",
@@ -132,17 +132,17 @@ const Welcome = () => {
                 backgroundColor: "#9ca3af",
               }}
             />
-            {/* {isLoading ? ( */}
-            {/* <Loader /> */}
-            {/* ) : ( */}
-            <button
-              type="button"
-              // onClick={handleSubmit}
-              className="send-money-btn"
-            >
-              Send now
-            </button>
-            {/* )} */}
+            {false ? (
+              <Loader />
+            ) : (
+              <button
+                type="button"
+                // onClick={handleSubmit}
+                className="send-money-btn"
+              >
+                Send now
+              </button>
+            )}
           </div>
         </div>
       </div>
