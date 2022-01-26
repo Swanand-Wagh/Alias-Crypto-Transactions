@@ -5,7 +5,7 @@ import { BsInfoCircle } from "react-icons/bs";
 import Loader from "./Loader";
 import "./Welcome.css";
 
-// import { TransactionContext } from "../context/TransactionContext";
+import { TransactionContext } from "../context/TransctionContext";
 // import { shortenAddress } from "../utils/shortenAddress";
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
@@ -20,6 +20,8 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const Welcome = () => {
+  const { connectWallet } = useContext(TransactionContext);
+
   return (
     <div className="welcome">
       <div className="welcome_container">
@@ -32,11 +34,7 @@ const Welcome = () => {
             Krypto.
           </p>
           {/* {!currentAccount && ( */}
-          <button
-            type="button"
-            // onClick={connectWallet}
-            className="connect-btn"
-          >
+          <button type="button" onClick={connectWallet} className="connect-btn">
             <AiFillPlayCircle
               style={{ marginRight: "0.5rem", color: "white" }}
             />
