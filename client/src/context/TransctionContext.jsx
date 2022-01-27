@@ -25,6 +25,10 @@ export const TransactionsProvider = ({ children }) => {
     try {
       if (!ethereum) return alert("Please install MetaMask.");
       const accounts = await ethereum.request({ method: "eth_accounts" });
+
+      if (accounts.length) {
+        setCurrentAccount(accounts[0]);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -47,5 +51,9 @@ export const TransactionsProvider = ({ children }) => {
     checkIfWalletIsConnected();
   }, []);
 
-  return <TransactionContext.Provider value={{connectWallet}}>{children}</TransactionContext.Provider>;
+  return (
+    <TransactionContext.Provider value={{ connectWallet, currentAccount }}>
+      {children}
+    </TransactionContext.Provider>
+  );
 };

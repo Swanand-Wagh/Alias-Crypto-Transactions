@@ -20,7 +20,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const Welcome = () => {
-  const { connectWallet } = useContext(TransactionContext);
+  const { connectWallet, currentAccount } = useContext(TransactionContext);
 
   return (
     <div className="welcome">
@@ -33,14 +33,20 @@ const Welcome = () => {
             Explore the crypto world. Buy and sell cryptocurrencies easily on
             Krypto.
           </p>
-          {/* {!currentAccount && ( */}
-          <button type="button" onClick={connectWallet} className="connect-btn">
-            <AiFillPlayCircle
-              style={{ marginRight: "0.5rem", color: "white" }}
-            />
-            <p style={{ fontWeight: "600", color: "white" }}>Connect Wallet</p>
-          </button>
-          {/* )} */}
+          {!currentAccount && (
+            <button
+              type="button"
+              onClick={connectWallet}
+              className="connect-btn"
+            >
+              <AiFillPlayCircle
+                style={{ marginRight: "0.5rem", color: "white" }}
+              />
+              <p style={{ fontWeight: "600", color: "white" }}>
+                Connect Wallet
+              </p>
+            </button>
+          )}
 
           <div className="welcome_table">
             <div
