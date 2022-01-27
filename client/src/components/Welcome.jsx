@@ -14,13 +14,28 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
     type={type}
     step="0.0001"
     value={value}
-    // onChange={(e) => handleChange(e, name)}
+    onChange={(e) => handleChange(e, name)}
     className="white-glassmorphism welcome_input"
   />
 );
 
 const Welcome = () => {
-  const { connectWallet, currentAccount } = useContext(TransactionContext);
+  const {
+    connectWallet,
+    handleChange,
+    setformData,
+    formData,
+    currentAccount,
+    sendTransaction,
+  } = useContext(TransactionContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { addressTo, amount, keyword, message } = formData;
+    if (!addressTo || !amount || !keyword || !message) return;
+
+    sendTransaction();
+  };
 
   return (
     <div className="welcome">
@@ -107,25 +122,25 @@ const Welcome = () => {
               placeholder="Address To"
               name="addressTo"
               type="text"
-              // handleChange={handleChange}
+              handleChange={handleChange}
             />
             <Input
               placeholder="Amount (ETH)"
               name="amount"
               type="number"
-              // handleChange={handleChange}
+              handleChange={handleChange}
             />
             <Input
               placeholder="Keyword (Gif)"
               name="keyword"
               type="text"
-              // handleChange={handleChange}
+              handleChange={handleChange}
             />
             <Input
               placeholder="Enter Message"
               name="message"
               type="text"
-              // handleChange={handleChange}
+              handleChange={handleChange}
             />
 
             <div
@@ -141,7 +156,7 @@ const Welcome = () => {
             ) : (
               <button
                 type="button"
-                // onClick={handleSubmit}
+                onClick={handleSubmit}
                 className="send-money-btn"
               >
                 Send now

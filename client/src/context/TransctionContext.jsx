@@ -19,7 +19,17 @@ const createEthereumContract = () => {
 };
 
 export const TransactionsProvider = ({ children }) => {
+  const [formData, setformData] = useState({
+    addressTo: "",
+    amount: "",
+    keyword: "",
+    message: "",
+  });
   const [currentAccount, setCurrentAccount] = useState("");
+
+  const handleChange = (e, name) => {
+    setformData((prevState) => ({ ...prevState, [name]: e.target.value }));
+  };
 
   const checkIfWalletIsConnected = async () => {
     try {
@@ -47,12 +57,29 @@ export const TransactionsProvider = ({ children }) => {
     }
   };
 
+  const sendTransaction = async () => {
+    try {
+      if (!ethereum) return alert("Please install MetaMask.");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     checkIfWalletIsConnected();
   }, []);
 
   return (
-    <TransactionContext.Provider value={{ connectWallet, currentAccount }}>
+    <TransactionContext.Provider
+      value={{
+        connectWallet,
+        handleChange,
+        setformData,
+        formData,
+        currentAccount,
+        sendTransaction,
+      }}
+    >
       {children}
     </TransactionContext.Provider>
   );
