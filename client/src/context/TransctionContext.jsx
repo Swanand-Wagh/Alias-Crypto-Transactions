@@ -88,10 +88,16 @@ export const TransactionsProvider = ({ children }) => {
       );
 
       setIsLoading(true);
-      console.log(`Loading - ${transactionHash.hash}`);
       await transactionHash.wait();
-      console.log(`Success - ${transactionHash.hash}`);
       setIsLoading(false);
+
+      setformData({
+        addressTo: "",
+        amount: "",
+        keyword: "",
+        message: "",
+      });
+      alert("Transaction Successful!");
 
       const transactionsCount =
         await transactionsContract.getTransactionCount();
@@ -114,6 +120,7 @@ export const TransactionsProvider = ({ children }) => {
         formData,
         currentAccount,
         sendTransaction,
+        isLoading,
       }}
     >
       {children}

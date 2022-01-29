@@ -11,11 +11,16 @@
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
+  height: 24px;
 }
 .footer_logo_container {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 32px;
+  margin-right: 100px;
 }
 .footer_logo {
   width: 32%;
@@ -42,10 +47,11 @@
 .footer_desc {
   text-align: center;
   color: white;
-  font-size: small;
+  font-size: 15px;
   margin-bottom: 0;
 }
 .footer_website {
+  font-size: 20px;
   margin-top: 0.25rem;
   text-align: center;
   color: white;

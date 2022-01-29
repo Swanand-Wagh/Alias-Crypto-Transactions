@@ -3,10 +3,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 21.5rem;
+  height: 87px;
 }
 .logo_container {
   justify-content: space-between;
   align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 32px;
 }
 .logo {
   width: 32%;

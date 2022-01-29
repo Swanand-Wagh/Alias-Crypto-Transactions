@@ -6,17 +6,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer gradient-bg-footer">
-        <div className="footer_left">
-          <div className="footer_logo_container">
-            <img src={logo} alt="logo" className="footer_logo" />
-          </div>
-          <div className="footer_links">
-            <p className="footer_item">Market</p>
-            <p className="footer_item">Exchange</p>
-            <p className="footer_item">Tutorials</p>
-            <p className="footer_item">Wallets</p>
-          </div>
-        </div>
+        <div className="footer_left"></div>
 
         <div className="footer_right">
           <p className="footer_desc">
